@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-12">
+        <h1>Sign in</h1>
+        <form action="/user/signin" method="POST">
+        {{#if hasErrors}}
+            <div class="alert alert-danger">
+                {{#each messages}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+        <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+        <br>
+        <p>New user Click <a href="/user/signup">sign up</a></p>
+    </div>
+</div>
