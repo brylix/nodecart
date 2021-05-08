@@ -26,6 +26,6 @@
     "stripe": "^8.46.0"
   },
   "devDependencies": {
-    "handlebars": "^4.5.0"
+    "handlebars": "^4.7.7"
   }
 }
